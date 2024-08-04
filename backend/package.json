@@ -1,0 +1,12 @@
+{
+  "name": "proyecto-administrador_pacientes",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Ful stack",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "WIlmer sneider",
+  "license": "ISC"
+}
