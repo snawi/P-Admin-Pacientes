@@ -2,8 +2,13 @@
 import express from 'express'
 import dotenv from 'dotenv'
 import conectarDB from './config/db.js';
+import router from './routes/veterinarioRoutes.js';
 
 const app = express();
+
+//leer datos desde postman al servidor
+app.use(express.json())
+
 //llamos dotenv para leer variables de entorno
 dotenv.config()
 
@@ -11,13 +16,14 @@ dotenv.config()
 conectarDB()
 
 
-app.use("/", (req, res) => {
-    res.send("hola express nuevamente con wilmer")
-})
+//configuracion rutas
+app.use("/api/veterinarios", router )
 
 
 
 
+
+//configuracion puerto
 const PORT = process.env.PORT || 4000
 
 app.listen(4000, () => {
